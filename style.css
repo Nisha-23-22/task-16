@@ -1,0 +1,154 @@
+/* Student Records */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+    color: #1f2937;
+    background-color: #ffffff;
+}
+
+/* ---------- Top bar ---------- */
+.topbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 7%;
+}
+
+.greeting {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.login-btn {
+    padding: 9px 26px;
+    font-family: inherit;
+    font-size: 13px;
+    color: #2563eb;
+    background-color: #e6f0ff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background-color: #d3e4ff;
+}
+
+/* ---------- Search section ---------- */
+.search-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+    margin: 10px 7% 26px 7%;
+    padding: 14px 16px;
+    border: 1px solid #eef0f3;
+    border-radius: 14px;
+}
+
+.search-box {
+    flex: 1;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 12px 16px;
+    font-family: inherit;
+    font-size: 13px;
+    color: #1f2937;
+    background-color: #f7f8fa;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    outline: none;
+}
+
+.search-box input:focus {
+    border-color: #6d28d9;
+    background-color: #ffffff;
+}
+
+.search-btn {
+    padding: 12px 34px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #6d12d6;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.search-btn:hover {
+    background-color: #5a0db3;
+}
+
+/* ---------- Cards ---------- */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    padding: 0 7% 50px 7%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    padding: 16px 18px;
+    font-size: 12px;
+    background-color: #f3f5f4;
+    border-radius: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(31, 41, 55, 0.1);
+}
+
+.card p {
+    line-height: 1.4;
+}
+
+.card .label {
+    color: #6b7280;
+}
+
+.card .value {
+    font-weight: 600;
+    color: #111827;
+}
+
+.no-result {
+    grid-column: 1 / -1;
+    padding: 40px 0;
+    text-align: center;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .search-section {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
